@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral(url: 'http://maven.aliyun.com/nexus/content/groups/public/')
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath('fr.avianey.androidsvgdrawable:gradle-plugin:3.0.0') {
+            exclude group: 'xerces'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter { url 'http://jcenter.bintray.com/' }
+        maven { url 'https://maven.google.com' }
+        mavenCentral(url: 'http://maven.aliyun.com/nexus/content/groups/public/')
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+}
